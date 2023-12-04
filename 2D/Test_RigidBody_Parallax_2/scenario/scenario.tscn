@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwagqcu7iogqp"]
+
+[ext_resource type="Script" path="res://scenario/scenario.gd" id="1_etlti"]
+[ext_resource type="PackedScene" uid="uid://b85ybrv83di8s" path="res://scenario/background/background.tscn" id="1_o3r60"]
+[ext_resource type="PackedScene" uid="uid://cikm4l4kosjk6" path="res://scenario/floor/floor.tscn" id="2_7n0pj"]
+
+[node name="Scenario" type="Node2D"]
+script = ExtResource("1_etlti")
+floor_scene = ExtResource("2_7n0pj")
+back_scene = ExtResource("1_o3r60")

@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://coftdddl714ng"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_lpeq0"]
+[ext_resource type="Texture2D" uid="uid://bu1r2vypvwxqd" path="res://player/player.png" id="2_6ivyv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oouba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6ivyv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pqfty"]
+radius = 15.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vvpnw"]
+radius = 20.0215
+height = 101.395
+
+[node name="Player" type="RigidBody2D"]
+script = ExtResource("1_lpeq0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_oouba")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -210)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(42, 23)
+shape = SubResource("CircleShape2D_pqfty")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-50, 24)
+shape = SubResource("CircleShape2D_pqfty")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -8)
+rotation = 1.5587
+scale = Vector2(0.727371, 1.43981)
+shape = SubResource("CapsuleShape2D_vvpnw")

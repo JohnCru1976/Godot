@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1699008274
+font1.tres::FontFile::-1::1698070663::0::1::::<><>::res://Roboto-Medium.ttf
+global.gd::GDScript::-1::1699002303::0::1::::<>Node<>::
+icon.svg::CompressedTexture2D::3986379381717100537::1698070663::1699001097::1::::<><>::
+LICENSE.txt::TextFile::-1::1698070663::0::1::::<><>::
+README.md::TextFile::-1::1698070663::0::1::::<><>::
+Roboto-Medium.ttf::FontFile::427920619133441077::1698070663::1699001097::1::::<><>::
+scene_1.gd::GDScript::-1::1699002303::0::1::::<>Control<>::
+scene_1.tscn::PackedScene::8358444939776870232::1699002363::0::1::::<><>::res://scene_1.gd<>res://font1.tres<>uid://bw2bc6oekwjlp::::res://icon.svg
+scene_2.gd::GDScript::-1::1699002363::0::1::::<>Control<>::
+scene_2.tscn::PackedScene::3107870423960825618::1699002364::0::1::::<><>::res://scene_2.gd<>res://font1.tres<>uid://bw2bc6oekwjlp::::res://icon.svg

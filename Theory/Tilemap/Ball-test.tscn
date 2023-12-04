@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://rs8rkadciq5x"]
+
+[node name="RectTest" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-42, -46, 39, -46, 39, 39, -41, 39)

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cll5c663k4ojw"]
+
+[ext_resource type="Script" path="res://elements/sticks/stick/stick.gd" id="1_2xx6n"]
+[ext_resource type="Texture2D" uid="uid://bdt7y7muj2vg8" path="res://elements/sticks/stick/stick.svg" id="2_4p1b8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gv0pv"]
+rough = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cu2a"]
+custom_solver_bias = 1.0
+size = Vector2(39.0436, 82.6149)
+
+[node name="Stick" type="AnimatableBody2D"]
+collision_layer = 2
+collision_priority = 50.0
+physics_material_override = SubResource("PhysicsMaterial_gv0pv")
+script = ExtResource("1_2xx6n")
+
+[node name="Stick" type="Sprite2D" parent="."]
+position = Vector2(91.75, 0)
+texture = ExtResource("2_4p1b8")
+
+[node name="CollisionShapeRight" type="CollisionShape2D" parent="."]
+position = Vector2(92, 5)
+rotation = -1.66775
+scale = Vector2(1.31409, -3.08494)
+shape = SubResource("RectangleShape2D_1cu2a")
+
+[node name="CollisionShapeLeft" type="CollisionShape2D" parent="."]
+position = Vector2(91, -4)
+rotation = -1.4823
+scale = Vector2(1.31409, -3.08494)
+shape = SubResource("RectangleShape2D_1cu2a")

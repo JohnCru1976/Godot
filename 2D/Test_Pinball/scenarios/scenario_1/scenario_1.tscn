@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://dotfcxxnv4llo"]
+
+[ext_resource type="Script" path="res://scenarios/scenario_1/scenario_1.gd" id="1_15q6r"]
+[ext_resource type="Texture2D" uid="uid://ci0ophar21chg" path="res://scenarios/scenario_1/scenario_1.svg" id="1_kivjy"]
+[ext_resource type="PackedScene" uid="uid://bk3nr3t8nbl1s" path="res://elements/sticks/sticks.tscn" id="2_bhl3v"]
+[ext_resource type="PackedScene" uid="uid://b4h8yob553i28" path="res://elements/serving/serving.tscn" id="4_giptm"]
+[ext_resource type="PackedScene" uid="uid://bwybqcnv7l2qt" path="res://elements/wall/wall.tscn" id="4_hwxn5"]
+[ext_resource type="PackedScene" uid="uid://bjvjiiq1l7wd3" path="res://elements/bounce_upper_stick/upper_stick.tscn" id="5_jlaxg"]
+[ext_resource type="PackedScene" uid="uid://b1tdt5aerg2pl" path="res://elements/bounce_circle/bounce_circle.tscn" id="6_xqiuo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a8fu6"]
+friction = 0.5
+bounce = 0.35
+
+[node name="Scenario1" type="Node2D"]
+script = ExtResource("1_15q6r")
+
+[node name="Scenario1" type="Sprite2D" parent="."]
+position = Vector2(539, 961)
+texture = ExtResource("1_kivjy")
+
+[node name="Sticks1" parent="." instance=ExtResource("2_bhl3v")]
+position = Vector2(287, 1752)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sticks2" parent="." instance=ExtResource("2_bhl3v")]
+position = Vector2(102, 866)
+scale = Vector2(0.7, 0.7)
+
+[node name="StaticCollisions" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_priority = 50.0
+physics_material_override = SubResource("PhysicsMaterial_a8fu6")
+
+[node name="Shape_0" type="CollisionPolygon2D" parent="StaticCollisions"]
+polygon = PackedVector2Array(311, 1922, 311, 1890, 279, 1886, 234, 1875, 159, 1841, 104, 1795, 69, 1753, 44, 1706, 28, 1661, 13, 1588, 10, 1553, 11, 989, 18, 964, 39, 917, 57, 893, 75, 881, 98, 871, 97, 854, 98, 838, 73, 826, 58, 817, 36, 788, 20, 750, 10.6614, 722.998, 11, 298, 18, 258, 28, 222, 42, 186, 69, 140, 96, 106, 130, 77, 165, 53, 197, 36, 235, 23, 292, 9, 492, 9, 782, 8, 839, 24, 882, 40, 942, 79, 991, 130, 1031, 198, 1047, 252, 1059, 341, 1059, 442, 1059, 607, 1059, 735, 1059, 864, 1059, 1920, 1202, 1920, 1184, -201, -172, -205, -127, 1928)
+
+[node name="Shape_1" type="CollisionPolygon2D" parent="StaticCollisions"]
+polygon = PackedVector2Array(667, 1889, 667, 1920, 995, 1920, 996, 381, 969, 380, 970, 1554, 963, 1628, 936, 1707, 908, 1759, 858, 1812, 807, 1847, 762, 1869, 710, 1882, 683, 1890)
+
+[node name="Shape_2" type="CollisionPolygon2D" parent="StaticCollisions"]
+position = Vector2(5, -51)
+polygon = PackedVector2Array(311, 1784, 273, 1772, 260, 1769, 244, 1761, 205, 1737, 169, 1700, 142, 1656, 117, 1603, 100, 1550, 92, 1504, 86, 1461, 80, 1398, 58, 1371, 61, 1396, 68, 1430, 67, 1480, 74, 1553, 91, 1621, 117, 1681, 145, 1725, 179, 1763, 198, 1788, 227, 1812, 267, 1831, 324, 1845)
+one_way_collision = true
+one_way_collision_margin = 2.1
+
+[node name="Shape_3" type="CollisionPolygon2D" parent="StaticCollisions"]
+position = Vector2(5, -49)
+polygon = PackedVector2Array(659, 1844, 665, 1784, 710, 1765, 751, 1745, 798, 1709, 831, 1662, 854, 1613, 874, 1561, 885, 1505, 889, 1469, 890, 1427, 891, 1394, 912, 1366, 908, 1409, 909, 1466, 906, 1519, 898, 1570, 884, 1623, 862, 1674, 838, 1714, 819, 1738, 785, 1768, 777, 1791, 760, 1800, 737, 1818, 707, 1831)
+one_way_collision = true
+one_way_collision_margin = 2.1
+
+[node name="Wall1" parent="StaticCollisions" instance=ExtResource("4_hwxn5")]
+z_index = -1
+position = Vector2(580, 763)
+rotation = 3.88559
+scale = Vector2(1, 2.96591)
+
+[node name="Serving" parent="." instance=ExtResource("4_giptm")]
+position = Vector2(1027, 1836)
+
+[node name="BounceCircles" type="Node" parent="."]
+
+[node name="BounceCircle1" parent="BounceCircles" instance=ExtResource("6_xqiuo")]
+position = Vector2(203, 451)
+
+[node name="BounceCircle2" parent="BounceCircles" instance=ExtResource("6_xqiuo")]
+position = Vector2(354, 213)
+
+[node name="BounceCircle3" parent="BounceCircles" instance=ExtResource("6_xqiuo")]
+position = Vector2(649, 230)
+
+[node name="BounceCircle4" parent="BounceCircles" instance=ExtResource("6_xqiuo")]
+position = Vector2(489, 451)
+
+[node name="UpperBouncers" type="Node" parent="."]
+
+[node name="LeftUpperBouncer" parent="UpperBouncers" instance=ExtResource("5_jlaxg")]
+position = Vector2(242, 1463)
+
+[node name="RightUpperBouncer" parent="UpperBouncers" instance=ExtResource("5_jlaxg")]
+position = Vector2(740, 1479)
+rotation = -3.14159
+scale = Vector2(1, -1)

@@ -1,0 +1,13 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1698389289
+fire_particle.png::CompressedTexture2D::3729279444034079503::1674518926::1698389292::1::::<><>::
+flipbook.png::CompressedTexture2D::2798902157258591820::1674518926::1698389292::1::::<><>::
+icon.png::CompressedTexture2D::7869202334572825560::1674518926::1698389292::1::::<><>::
+mask.png::CompressedTexture2D::4086645307543861677::1674518926::1698389292::1::::<><>::
+particles.tscn::PackedScene::-1::1698389278::0::1::::<><>::res://fire_particle.png<>res://smoke_particle.png<>res://spark_particle2.png<>res://point_texture_emit.tres<>res://point_texture_image_outline.tres<>res://point_normal_texture_image_outline.tres<>res://flipbook.png
+point_normal_texture_image_outline.tres::ImageTexture::-1::1698389278::0::1::::<><>::
+point_texture_emit.tres::ImageTexture::-1::1698389278::0::1::::<><>::
+point_texture_image_outline.tres::ImageTexture::-1::1698389278::0::1::::<><>::
+README.md::TextFile::-1::1674518926::0::1::::<><>::
+smoke_particle.png::CompressedTexture2D::389206666856680452::1674518926::1698389292::1::::<><>::
+spark_particle2.png::CompressedTexture2D::1336267423828671590::1674518926::1698389292::1::::<><>::

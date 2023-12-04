@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0slt2don66j6"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_hv67m"]
+[ext_resource type="PackedScene" uid="uid://bwagqcu7iogqp" path="res://scenario/scenario.tscn" id="1_l334x"]
+[ext_resource type="PackedScene" uid="uid://coftdddl714ng" path="res://player/player.tscn" id="2_h7vow"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_hv67m")
+
+[node name="Scenario" parent="." instance=ExtResource("1_l334x")]
+
+[node name="Player" parent="." instance=ExtResource("2_h7vow")]
+position = Vector2(435, 422)
+
+[connection signal="move_scenario" from="Player" to="Scenario" method="_on_player_move_scenario"]

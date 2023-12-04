@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cikm4l4kosjk6"]
+
+[ext_resource type="Texture2D" uid="uid://b824cjsghf7s1" path="res://scenario/floor/floor.svg" id="1_sk04l"]
+[ext_resource type="PackedScene" uid="uid://b5u6p3lvnbnwq" path="res://scenario/obstacles/hill-1.tscn" id="2_8qg7r"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jer4q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gopiu"]
+size = Vector2(1400, 84)
+
+[node name="Floor" type="StaticBody2D"]
+z_index = 4
+material = SubResource("CanvasItemMaterial_jer4q")
+
+[node name="Floor" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(700, 42)
+texture = ExtResource("1_sk04l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(700, 42)
+shape = SubResource("RectangleShape2D_gopiu")
+
+[node name="hill-1" parent="." instance=ExtResource("2_8qg7r")]
+position = Vector2(837, 7)

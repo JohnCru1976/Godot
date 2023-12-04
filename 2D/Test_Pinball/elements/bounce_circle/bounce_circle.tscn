@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1tdt5aerg2pl"]
+
+[ext_resource type="Script" path="res://elements/bounce_circle/bounce_circle.gd" id="1_5flhr"]
+[ext_resource type="Texture2D" uid="uid://c61w6ens45q38" path="res://elements/bounce_circle/bounce_circle.svg" id="1_65ano"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pycir"]
+radius = 66.0303
+
+[node name="BounceCircle" type="AnimatableBody2D"]
+collision_layer = 8
+script = ExtResource("1_5flhr")
+
+[node name="BounceCircle" type="Sprite2D" parent="."]
+texture = ExtResource("1_65ano")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pycir")

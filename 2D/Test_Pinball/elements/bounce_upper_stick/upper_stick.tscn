@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjvjiiq1l7wd3"]
+
+[ext_resource type="Script" path="res://elements/bounce_upper_stick/upper_stick.gd" id="1_8korg"]
+[ext_resource type="Texture2D" uid="uid://deohme72qan52" path="res://elements/bounce_upper_stick/upper_stick.svg" id="1_pkl2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ryq0"]
+size = Vector2(259.535, 13.2005)
+
+[node name="left_upper_stick" type="AnimatableBody2D"]
+collision_layer = 8
+script = ExtResource("1_8korg")
+
+[node name="LeftUpperStick" type="Sprite2D" parent="."]
+texture = ExtResource("1_pkl2h")
+
+[node name="BounceShape" type="CollisionShape2D" parent="."]
+position = Vector2(1.46763, 0.246814)
+rotation = 1.13668
+shape = SubResource("RectangleShape2D_8ryq0")
+
+[node name="BackShape" type="CollisionPolygon2D" parent="."]
+rotation = 0.00239193
+polygon = PackedVector2Array(65.373, 155.844, 76.3562, 148.818, 62.2749, 114.851, 50.2893, 120.88, -59.2725, -113.859, -47.2869, -119.887, -64.3682, -153.846, -70.3658, -152.832, -73.3394, -141.825, -77, -87, -73, -42, -67, -3, -53, 47, -35, 85, -8, 123, 15, 143, 51, 155)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5u6p3lvnbnwq"]
+
+[ext_resource type="Texture2D" uid="uid://dv7bqf5xmmhbu" path="res://scenario/obstacles/hill_1.svg" id="1_0mmvi"]
+
+[node name="hill-1" type="StaticBody2D"]
+z_index = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(252, -64)
+texture = ExtResource("1_0mmvi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(502, 6, 500, -30, 485, -71, 450, -104, 398, -131, 355, -138, 284, -138, 217, -133, 192, -122, 164, -85, 141, -52, 110, -26, 70, -8, 21, 0, -2, 0, 77, 9, 187, 12, 350, 11, 448, 11)

@@ -1,0 +1,7 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1699510921
+eight_way_movement.gd::GDScript::-1::1699477809::0::1::::<>CharacterBody2D<>::
+eight_way_movement.tscn::PackedScene::2209446286277275986::1699479137::0::1::::<><>::res://eight_way_movement.gd<>uid://p660cxtablyr::::res://icon.svg
+icon.svg::CompressedTexture2D::1118755378010249365::1699477007::1699477019::1::::<><>::
+rotation_movement.gd::GDScript::-1::1699479056::0::1::::<>CharacterBody2D<>::
+rotation_movement.tscn::PackedScene::3227857277644363409::1699479138::0::1::::<><>::res://rotation_movement.gd<>uid://p660cxtablyr::::res://icon.svg
