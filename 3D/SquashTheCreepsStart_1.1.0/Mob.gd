@@ -20,6 +20,7 @@ func initialize(start_position, player_position):
 	look_at_from_position(start_position, player_position, Vector3.UP)
 	rotation.x = 0
 	rotation.z = 0
+	position.y = 0.5
 	# Rotate this mob randomly within range of -45 and +45 degrees,
 	# so that it doesn't move directly towards the player.
 	rotate_y(randf_range(-PI / 4, PI / 4))

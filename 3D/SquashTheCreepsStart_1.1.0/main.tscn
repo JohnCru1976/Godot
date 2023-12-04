@@ -45,7 +45,7 @@ transform = Transform3D(1, 0, 0, 0, 0.559193, 0.829038, 0, -0.829038, 0.559193, 
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_2860c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0806332, 0.773277, -0.0771427)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0806332, 0.495668, -0.0771427)
 
 [node name="CameraPivot" type="Marker3D" parent="."]
 
@@ -84,4 +84,5 @@ transform = Transform3D(-0.00183813, 0, -0.999998, 0, 1, 0, 0.999998, 0, -0.0018
 wait_time = 0.5
 autostart = true
 
+[connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
