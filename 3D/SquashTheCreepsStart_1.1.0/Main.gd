@@ -2,14 +2,11 @@ extends Node
 
 @export var mob_scene: PackedScene
 
-
-
-
 func _on_mob_timer_timeout():
 	# Create a new instance of the Mob scene.
 	var mob = mob_scene.instantiate()
 
-	# Choose a random location on the SpawnPath.
+	# Choose a random location on the SpawnPath
 	# We store the reference to the SpawnLocation node.
 	var mob_spawn_location = get_node("SpawnPath/SpawnLocation")
 	# And give it a random offset.
