@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://djxe4n4cjuf4j"]
+
+[ext_resource type="Script" path="res://Mob.gd" id="1_jcgl0"]
+[ext_resource type="PackedScene" uid="uid://djvjqsvm1n1gf" path="res://art/mob.glb" id="1_yhi8g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1o5l6"]
+size = Vector3(1.64061, 0.962646, 1.87312)
+
+[node name="Mob" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_jcgl0")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Character" parent="Pivot" instance=ExtResource("1_yhi8g")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00171304, 0.296046, -0.00201058)
+shape = SubResource("BoxShape3D_1o5l6")
+
+[node name="VisibleNotifier" type="VisibleOnScreenNotifier3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.313968, 0.290422)
+aabb = AABB(-1.17339, -0.450499, -1.6741, 2.34678, 0.900997, 3.34819)
+
+[connection signal="screen_exited" from="VisibleNotifier" to="." method="_on_visible_notifier_screen_exited"]
