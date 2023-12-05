@@ -47,11 +47,10 @@ mesh = SubResource("BoxMesh_5ycm2")
 skeleton = NodePath("../..")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.559193, 0.829038, 0, -0.829038, 0.559193, 0, 35.0935, 0)
+transform = Transform3D(0.955407, 0.208817, 0.208788, -0.284163, 0.45788, 0.842376, 0.0803028, -0.864142, 0.4968, 0, 37.9931, 2.36549)
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_2860c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0806332, 0.495668, -0.0771427)
 
 [node name="CameraPivot" type="Marker3D" parent="."]
 
@@ -59,8 +58,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0806332, 0.495668, -0.0771
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 19, 19)
 projection = 1
 size = 19.0
-near = 0.056
-far = 443.61
+far = 163.27
 
 [node name="Cylinders" type="Node3D" parent="."]
 
