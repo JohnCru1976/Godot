@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://dopma56vemkit"]
+
+[ext_resource type="PackedScene" uid="uid://8l7ve21g7bb7" path="res://humanoid.tscn" id="1_8igka"]
+[ext_resource type="Material" uid="uid://dygdo5cmvckck" path="res://art/ball.tres" id="2_68po2"]
+
+[sub_resource type="Environment" id="Environment_6h1eb"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_awjqn"]
+size = Vector2(20, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_n0ids"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6dmd1"]
+bounce = 0.3
+
+[sub_resource type="GDScript" id="GDScript_2ckhf"]
+script/source = "extends RigidBody3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5bn3m"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_s3a32"]
+material = ExtResource("2_68po2")
+
+[node name="World" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6h1eb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999998, -0.000991423, 0.00173415, -0.00125495, 0.363618, 0.931547, -0.00155413, -0.931547, 0.363616, 0, 6.54821, 0)
+shadow_enabled = true
+directional_shadow_pancake_size = 6.1
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_awjqn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_n0ids")
+
+[node name="Humanoid" parent="." instance=ExtResource("1_8igka")]
+collision_layer = 2
+collision_mask = 5
+
+[node name="Ball" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0346479, 2.94048, -1.57349)
+collision_layer = 4
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_6dmd1")
+script = SubResource("GDScript_2ckhf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ball"]
+shape = SubResource("SphereShape3D_5bn3m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ball"]
+mesh = SubResource("SphereMesh_s3a32")
