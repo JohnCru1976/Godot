@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwkjr7t3xcby"]
+
+[ext_resource type="Script" path="res://test_scene.gd" id="1_r0fes"]
+[ext_resource type="PackedScene" uid="uid://rumkyjlutpgw" path="res://dummy.tscn" id="2_e4dbl"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7depm"]
+size = Vector2(40, 40)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gr3sj"]
+data = PackedVector3Array(20, 0, 20, -20, 0, 20, 20, 0, -20, -20, 0, 20, -20, 0, -20, 20, 0, -20)
+
+[node name="TestScene" type="Node3D"]
+script = ExtResource("1_r0fes")
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_7depm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_gr3sj")
+
+[node name="Dummy" parent="." instance=ExtResource("2_e4dbl")]
+metadata/_edit_group_ = true
+
+[node name="Camera3D" type="Camera3D" parent="Dummy"]
+transform = Transform3D(1, 0, 0, 0, 0.94235, 0.334629, 0, -0.334629, 0.94235, 0, 3.70829, 5.51649)
+metadata/_edit_group_ = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.577516, 0.81638, 0, -0.81638, 0.577516, 0, 6.01244, 4.10173)
+shadow_enabled = true

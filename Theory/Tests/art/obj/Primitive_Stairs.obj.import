@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5p4v6xaa8ihy"
+path="res://.godot/imported/Primitive_Stairs.obj-02895be0d987829abe38d2063810669b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Primitive_Stairs.obj-02895be0d987829abe38d2063810669b.mesh"]
+
+source_file="res://art/obj/Primitive_Stairs.obj"
+dest_files=["res://.godot/imported/Primitive_Stairs.obj-02895be0d987829abe38d2063810669b.mesh", "res://.godot/imported/Primitive_Stairs.obj-02895be0d987829abe38d2063810669b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

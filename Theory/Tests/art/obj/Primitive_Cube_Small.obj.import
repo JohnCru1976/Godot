@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cjtbsorykvon6"
+path="res://.godot/imported/Primitive_Cube_Small.obj-b1d638784b0736656524877cdacaefcc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Primitive_Cube_Small.obj-b1d638784b0736656524877cdacaefcc.mesh"]
+
+source_file="res://art/obj/Primitive_Cube_Small.obj"
+dest_files=["res://.godot/imported/Primitive_Cube_Small.obj-b1d638784b0736656524877cdacaefcc.mesh", "res://.godot/imported/Primitive_Cube_Small.obj-b1d638784b0736656524877cdacaefcc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

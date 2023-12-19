@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mt4etj3hmbps"
+path="res://.godot/imported/Locker_Door.obj-99c222967fb43283af03a2206ce3e20f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Locker_Door.obj-99c222967fb43283af03a2206ce3e20f.mesh"]
+
+source_file="res://art/obj/Locker_Door.obj"
+dest_files=["res://.godot/imported/Locker_Door.obj-99c222967fb43283af03a2206ce3e20f.mesh", "res://.godot/imported/Locker_Door.obj-99c222967fb43283af03a2206ce3e20f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
